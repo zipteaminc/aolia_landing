@@ -6,19 +6,17 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
-function Router() {
-  const basePath = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
-  const homePaths = basePath === "/" ? ["/"] : [basePath, `${basePath}/`];
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+const homePaths = basePath ? [basePath, `${basePath}/`] : ["/"];
+const notFoundPath = basePath ? `${basePath}/404` : "/404";
 
+function Router() {
   return (
     <Switch>
-      {homePaths.map(path => (
+      {homePaths.map((path) => (
         <Route key={path} path={path} component={Home} />
       ))}
-      <Route
-        path={basePath === "/" ? "/404" : `${basePath}/404`}
-        component={NotFound}
-      />
+      <Route path={notFoundPath} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );

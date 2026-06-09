@@ -14,16 +14,19 @@ const homeHref = import.meta.env.BASE_URL || "/";
 
 export default function Footer() {
   return (
-    <footer className="w-full" style={{ backgroundColor: "#3E3A36" }}>
+    <footer
+      className="w-full"
+      style={{ backgroundColor: '#3E3A36' }}
+    >
       {/* Footer bottom bar — logo left, copyright center, links right */}
       {/* margin-top 167px from disclaimer/watermark in CTASection */}
       <div
         className="flex items-center justify-between"
         style={{
-          paddingLeft: "68px",
-          paddingRight: "68px",
-          paddingTop: "167px",
-          paddingBottom: "40px",
+          paddingLeft: '68px',
+          paddingRight: '68px',
+          paddingTop: '167px',
+          paddingBottom: '40px',
         }}
       >
         {/* Logo — FullLogo_GradientIcon_ForDarkBackgrounds, 95×23px */}
@@ -35,14 +38,14 @@ export default function Footer() {
           <img
             src={fullLogo}
             alt="Aolia"
-            style={{ width: "95px", height: "23px", objectFit: "contain" }}
+            style={{ width: '95px', height: '23px', objectFit: 'contain' }}
           />
         </a>
 
         {/* Copyright — DM Sans Light 12px, white, center aligned */}
         <p
           className="font-body font-light text-white text-center flex-1 px-4"
-          style={{ fontSize: "12px", lineHeight: "18px" }}
+          style={{ fontSize: '12px', lineHeight: '18px' }}
         >
           © 2026 Macnica, Inc. All rights reserved
         </p>
@@ -57,14 +60,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="font-body font-normal text-white hover:opacity-60 transition-opacity"
-            style={{ fontSize: "14px" }}
+            style={{ fontSize: '14px' }}
           >
             Blog
           </a>
           <a
             href="mailto:hello@aolia.ai"
             className="font-body font-normal text-white hover:opacity-60 transition-opacity"
-            style={{ fontSize: "14px" }}
+            style={{ fontSize: '14px' }}
           >
             Contact
           </a>

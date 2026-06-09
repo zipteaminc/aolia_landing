@@ -1,13 +1,12 @@
 /**
  * CTASection — "Follow the work as it happens."
  * Figma spec:
- * - Background: #3E3A36 (starts immediately after 116px cream gap)
+ * - Background: #3E3A36
  * - H2: DM Sans Bold 41px
  * - Supporting text: width 529px, white, DM Sans Regular 19px/25px, margin-top 19px
  * - 41px gap between supporting text and subscribe form
  * - Disclaimer: 2 lines, fully visible on dark background
- * - Substack watermark below disclaimer
- * Note: Substack iframe forces its own bg — using custom form that submits to Substack
+ * - Aolia blog subscription watermark below disclaimer
  */
 
 import { useState } from 'react';
@@ -104,87 +103,6 @@ export default function CTASection() {
           )}
         </div>
 
-        {/* Disclaimer — 2 lines, fully visible on dark background */}
-        <p
-          className="font-body font-normal"
-          style={{ fontSize: '12px', lineHeight: '18px', color: 'rgba(255,255,255,0.75)', marginTop: '12px' }}
-        >
-          By subscribing you agree to{' '}
-          <a
-            href="https://substack.com/tos"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:opacity-70 transition-opacity"
-            style={{ color: 'rgba(255,255,255,0.85)' }}
-          >
-            Substack&rsquo;s Terms of Use
-          </a>
-          {', '}
-          <a
-            href="https://substack.com/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:opacity-70 transition-opacity"
-            style={{ color: 'rgba(255,255,255,0.85)' }}
-          >
-            our Privacy Policy
-          </a>
-          <br />
-          {' and '}
-          <a
-            href="https://substack.com/ccpa#personal-data-collected"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:opacity-70 transition-opacity"
-            style={{ color: 'rgba(255,255,255,0.85)' }}
-          >
-            our Information collection notice
-          </a>
-        </p>
-
-        {/* Substack watermark — matching the default Substack embed branding */}
-        <div
-          className="flex justify-end items-center"
-          style={{ maxWidth: '480px', margin: '8px auto 0' }}
-        >
-          <a
-            href="https://substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:opacity-70 transition-opacity"
-            aria-label="Powered by Substack"
-            style={{ textDecoration: 'none' }}
-          >
-            {/* Substack logo SVG — inline for reliability */}
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M15.9 3.6H0V5.4H15.9V3.6Z"
-                fill="rgba(255,255,255,0.55)"
-              />
-              <path
-                d="M0 7.2V16L7.95 11.9L15.9 16V7.2H0Z"
-                fill="rgba(255,255,255,0.55)"
-              />
-              <path
-                d="M15.9 0H0V1.8H15.9V0Z"
-                fill="rgba(255,255,255,0.55)"
-              />
-            </svg>
-            <span
-              className="font-body font-normal"
-              style={{ fontSize: '12px', color: 'rgba(255,255,255,0.55)' }}
-            >
-              substack
-            </span>
-          </a>
-        </div>
       </div>
     </section>
   );
