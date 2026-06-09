@@ -48,7 +48,7 @@ export default function FromTheFieldSection() {
           rel="noopener noreferrer"
           className="font-body font-semibold text-[#3E3A36] underline underline-offset-4 hover:opacity-70 transition-opacity flex-shrink-0 ml-6"
           style={{ fontSize: '14px' }}
-          aria-label="All Posts on Aolia blog"
+          aria-label="All posts on Aolia blog"
         >
           All Posts
         </a>

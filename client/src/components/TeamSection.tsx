@@ -1,11 +1,12 @@
+import teamLine from "@/assets/illustrations/team-line.svg";
 import daichiYoshikawaPortrait from "@/assets/team/daichi-yoshikawa.png";
 import daisukeNishimuraPortrait from "@/assets/team/daisuke-nishimura.png";
 import dolmaRawatPortrait from "@/assets/team/dolma-rawat.png";
 import jerelynCoPortrait from "@/assets/team/jerelyn-co.png";
-import teamLine from "@/assets/illustrations/team-line.svg";
+import karynaShkodaPortrait from "@/assets/team/karyna-shkoda.png";
 import yukiBabaPortrait from "@/assets/team/yuki-baba.png";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from 'react';
 
 /**
  * TeamSection — "Who is behind this."
@@ -18,6 +19,7 @@ import { useRef, useEffect, useState } from "react";
  * - Card dimensions: exactly 376×426px
  * - Card layout: 68px left AND right margin, equal gaps between cards
  * - Vertical gap between rows = horizontal gap between cards
+ *   → row-gap: calc((100% - 2 * 68px - 3 * 376px) / 2)
  * - Per-card illustration sizes and spacing from Figma spec
  * - LinkedIn: DM Sans Semibold 14px
  * - 136px below team cards → divider line → 71px → "From the field." title
@@ -38,81 +40,102 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Daisuke Nishimura",
-    role: "Co-Founder & Managing Director",
-    description: "Leading product strategy for AI-native assessment at Aolia.",
-    linkedinUrl: "https://www.linkedin.com/in/daisuke-nishimura-9583055b/",
+    name: 'Daisuke Nishimura',
+    role: 'Co-Founder & Managing Director',
+    description: 'Leading product strategy for AI-native assessment at Aolia.',
+    linkedinUrl: 'https://www.linkedin.com/in/daisuke-nishimura-9583055b/',
     portraitSrc: daisukeNishimuraPortrait,
-    portraitAlt: "Daisuke Nishimura portrait illustration",
+    portraitAlt: 'Daisuke Nishimura portrait illustration',
     portraitWidth: 164,
     portraitHeight: 151,
     marginTopToPortrait: 38,
     marginPortraitToName: 38,
   },
   {
-    name: "Daichi Yoshikawa",
-    role: "Chief Engineer & Product Engineering Lead",
-    description: "Leading end-to-end development of Aolia.",
-    linkedinUrl:
-      "https://www.linkedin.com/in/daichi-yoshikawa-profile/?skipRedirect=true",
+    name: 'Daichi Yoshikawa',
+    role: 'Chief Engineer & Product Engineering Lead',
+    description: 'Leading end-to-end development of Aolia.',
+    linkedinUrl: 'https://www.linkedin.com/in/daichi-yoshikawa-profile/?skipRedirect=true',
     portraitSrc: daichiYoshikawaPortrait,
-    portraitAlt: "Daichi Yoshikawa portrait illustration",
-    portraitWidth: 179,
-    portraitHeight: 171,
+    portraitAlt: 'Daichi Yoshikawa portrait illustration',
+    portraitWidth: 173.57,
+    portraitHeight: 156,
     marginTopToPortrait: 38,
-    marginPortraitToName: 18,
+    marginPortraitToName: 33,
   },
   {
-    name: "Yuki Baba",
-    role: "DevOps Engineer",
-    description: "Web application infrastructure development.",
-    linkedinUrl: "https://www.linkedin.com/in/yuki-baba-6bba0a20a/",
+    name: 'Yuki Baba',
+    role: 'DevOps Engineer',
+    description: 'Web application infrastructure development.',
+    linkedinUrl: 'https://www.linkedin.com/in/yuki-baba-6bba0a20a/',
     portraitSrc: yukiBabaPortrait,
-    portraitAlt: "Yuki Baba portrait illustration",
-    portraitWidth: 196,
-    portraitHeight: 171,
+    portraitAlt: 'Yuki Baba portrait illustration',
+    portraitWidth: 168.16,
+    portraitHeight: 160,
     marginTopToPortrait: 38,
-    marginPortraitToName: 18,
+    marginPortraitToName: 29,
   },
   {
-    name: "Dolma Rawat",
-    role: "Go to Market & Research Lead",
-    description: "Lead product and customer research for Aolia.",
-    linkedinUrl: "https://www.linkedin.com/in/dolmarawat/",
+    name: 'Dolma Rawat',
+    role: 'Go to Market & Research Lead',
+    description: 'Lead product and customer research for Aolia.',
+    linkedinUrl: 'https://www.linkedin.com/in/dolmarawat/',
     portraitSrc: dolmaRawatPortrait,
-    portraitAlt: "Dolma Rawat portrait illustration",
-    portraitWidth: 198,
+    portraitAlt: 'Dolma Rawat portrait illustration',
+    portraitWidth: 171.66,
+    portraitHeight: 161.98,
+    marginTopToPortrait: 38,
+    marginPortraitToName: 27,
+  },
+  {
+    name: 'Jerelyn Co',
+    role: 'AI Technical Lead',
+    description: 'Leads the technical strategy of the AI team.',
+    linkedinUrl: 'https://www.linkedin.com/in/jerelyn-co',
+    portraitSrc: jerelynCoPortrait,
+    portraitAlt: 'Jerelyn Co portrait illustration',
+    portraitWidth: 153.1,
     portraitHeight: 162,
     marginTopToPortrait: 38,
     marginPortraitToName: 27,
   },
   {
-    name: "Jerelyn Co",
-    role: "AI Technical Lead",
-    description: "Leads the technical strategy of the AI team.",
-    linkedinUrl: "https://www.linkedin.com/in/jerelyn-co",
-    portraitSrc: jerelynCoPortrait,
-    portraitAlt: "Jerelyn Co portrait illustration",
-    portraitWidth: 153,
-    portraitHeight: 162,
+    name: 'Karyna Shkoda',
+    role: 'Marketing Specialist',
+    description: 'Focused on content and marketing strategy.',
+    linkedinUrl: 'https://www.linkedin.com/in/karyna-shkoda/',
+    portraitSrc: karynaShkodaPortrait,
+    portraitAlt: 'Karyna Shkoda portrait illustration',
+    portraitWidth: 175.23,
+    portraitHeight: 160,
     marginTopToPortrait: 38,
-    marginPortraitToName: 27,
+    marginPortraitToName: 29,
   },
 ];
 
 function TeamCard({ member }: { member: TeamMember }) {
   return (
     <article
-      className="flex flex-col items-center text-center"
+      className="flex flex-col items-center text-center group"
       style={{
-        backgroundColor: "#B5A898",
-        borderRadius: "16px",
-        width: "376px",
-        minWidth: "376px",
-        height: "426px",
-        padding: "0 24px",
-        overflow: "hidden",
+        backgroundColor: '#B5A898',
+        borderRadius: '16px',
+        width: '376px',
+        minWidth: '376px',
+        height: '426px',
+        padding: '0 24px',
+        overflow: 'hidden',
         flexShrink: 0,
+        transition: 'transform 220ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 220ms cubic-bezier(0.23, 1, 0.32, 1)',
+        cursor: 'default',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-6px)';
+        e.currentTarget.style.boxShadow = '0 16px 40px rgba(62,58,54,0.14), 0 4px 12px rgba(62,58,54,0.08)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = 'none';
       }}
     >
       {/* Portrait */}
@@ -123,17 +146,19 @@ function TeamCard({ member }: { member: TeamMember }) {
           height: `${member.portraitHeight}px`,
           marginTop: `${member.marginTopToPortrait}px`,
           flexShrink: 0,
-          maxWidth: "100%",
+          maxWidth: '100%',
         }}
       >
         <img
           src={member.portraitSrc}
           alt={member.portraitAlt}
+          className="group-hover:scale-105"
           style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            objectPosition: "bottom",
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+            objectPosition: 'bottom',
+            transition: 'transform 280ms cubic-bezier(0.23, 1, 0.32, 1)',
           }}
         />
       </div>
@@ -142,8 +167,8 @@ function TeamCard({ member }: { member: TeamMember }) {
       <h3
         className="font-body font-medium text-[#3E3A36]"
         style={{
-          fontSize: "18px",
-          lineHeight: "24px",
+          fontSize: '18px',
+          lineHeight: '24px',
           marginTop: `${member.marginPortraitToName}px`,
         }}
       >
@@ -153,7 +178,7 @@ function TeamCard({ member }: { member: TeamMember }) {
       {/* Role */}
       <p
         className="font-body font-light text-[#3E3A36]"
-        style={{ fontSize: "14px", lineHeight: "20px", marginTop: "4px" }}
+        style={{ fontSize: '14px', lineHeight: '20px', marginTop: '4px' }}
       >
         {member.role}
       </p>
@@ -162,10 +187,10 @@ function TeamCard({ member }: { member: TeamMember }) {
       <p
         className="font-body font-normal text-[#3E3A36]"
         style={{
-          fontSize: "15px",
-          lineHeight: "22px",
-          maxWidth: "285px",
-          marginTop: "13px",
+          fontSize: '15px',
+          lineHeight: '22px',
+          maxWidth: '285px',
+          marginTop: '13px',
         }}
       >
         {member.description}
@@ -176,13 +201,17 @@ function TeamCard({ member }: { member: TeamMember }) {
         href={member.linkedinUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-body text-[#3E3A36] hover:opacity-60 transition-opacity"
+        className="font-body text-[#3E3A36]"
         style={{
-          fontSize: "14px",
+          fontSize: '14px',
           fontWeight: 600,
-          textDecoration: "underline",
-          marginTop: "22px",
+          textDecoration: 'underline',
+          marginTop: '22px',
+          opacity: 0.55,
+          transition: 'opacity 180ms ease-out',
         }}
+        onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+        onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.55')}
         aria-label={`${member.name} on LinkedIn`}
       >
         Linkedin
@@ -192,51 +221,48 @@ function TeamCard({ member }: { member: TeamMember }) {
 }
 
 export default function TeamSection() {
-  // rowGap is dynamically computed to match the space-between column gap
   const gridRef = useRef<HTMLDivElement>(null);
-  const [rowGap, setRowGap] = useState(28);
+  const [rowGap, setRowGap] = useState(0);
 
   useEffect(() => {
     function syncRowGap() {
       const grid = gridRef.current;
       if (!grid) return;
+      // containerWidth includes the 68px left + 68px right padding
       const containerWidth = grid.clientWidth;
-      // grid div has paddingLeft + paddingRight = 68 + 68 = 136px
-      // Available inner width = containerWidth - 136
-      // space-between distributes (innerWidth - 3 * 376px) / 2 as each column gap
-      const innerWidth = containerWidth - 136;
+      const innerWidth = containerWidth - 136; // subtract both paddings
       const gap = Math.max(0, (innerWidth - 3 * 376) / 2);
       setRowGap(gap);
     }
     syncRowGap();
-    const observer = new ResizeObserver(syncRowGap);
-    if (gridRef.current) observer.observe(gridRef.current);
-    return () => observer.disconnect();
+    const ro = new ResizeObserver(syncRowGap);
+    if (gridRef.current) ro.observe(gridRef.current);
+    return () => ro.disconnect();
   }, []);
 
   return (
-    <section className="w-full bg-[#F2EDE4]" style={{ paddingTop: "122px" }}>
+    <section className="w-full bg-[#F2EDE4]" style={{ paddingTop: '122px' }}>
       {/* Header area */}
-      <div style={{ paddingLeft: "68px", paddingRight: "68px" }}>
+      <div style={{ paddingLeft: '68px', paddingRight: '68px' }}>
         {/* H2 heading */}
         <h2
           className="font-body font-bold text-[#3E3A36]"
-          style={{ fontSize: "clamp(1.6rem, 3.2vw, 41px)", lineHeight: 1.15 }}
+          style={{ fontSize: 'clamp(1.6rem, 3.2vw, 41px)', lineHeight: 1.15 }}
         >
           Who is behind this.
         </h2>
 
-        {/* Decorative line SVG — 362×11px, margin-top 6px from H2 */}
-        <div style={{ marginTop: "6px" }}>
+        {/* Decorative line SVG — 362×11px, margin-top 6px from H2, shifted 3px left */}
+        <div style={{ marginTop: '6px', marginLeft: '-3px' }}>
           <img
             src={teamLine}
             alt=""
             aria-hidden="true"
             style={{
-              width: "362px",
-              height: "11px",
-              display: "block",
-              maxWidth: "100%",
+              width: '362px',
+              height: '11px',
+              display: 'block',
+              maxWidth: '100%',
             }}
           />
         </div>
@@ -245,10 +271,10 @@ export default function TeamSection() {
         <p
           className="font-body font-normal text-[#3E3A36]"
           style={{
-            fontSize: "19px",
-            lineHeight: "25px",
-            maxWidth: "638px",
-            marginTop: "20px",
+            fontSize: '19px',
+            lineHeight: '25px',
+            maxWidth: '638px',
+            marginTop: '20px',
           }}
         >
           We&rsquo;re a team exploring how assessment for accreditation can work
@@ -256,31 +282,32 @@ export default function TeamSection() {
         </p>
       </div>
 
-      {/* Team cards — 68px outer margins, fixed 376px columns, gaps auto-distributed via space-between */}
-      {/* rowGap is dynamically synced to the computed column gap via ResizeObserver */}
+      {/*
+        Team cards grid:
+        - 68px left/right padding
+        - 3 fixed 376px columns, space-between for horizontal gaps
+        - row-gap matches the computed column gap:
+            column gap = (100% - 2×68px - 3×376px) / 2
+            but 100% here is the grid container width (which includes padding),
+            so inner width = 100% - 136px, and gap = (inner - 1128) / 2
+            → row-gap: calc((100% - 136px - 1128px) / 2)
+        - 6 cards → 2 full rows of 3, no spacer needed
+      */}
       <div
         ref={gridRef}
         style={{
-          paddingLeft: "68px",
-          paddingRight: "68px",
-          marginTop: "62px",
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 376px)",
-          justifyContent: "space-between",
+          paddingLeft: '68px',
+          paddingRight: '68px',
+          marginTop: '62px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 376px)',
+          justifyContent: 'space-between',
           rowGap: `${rowGap}px`,
         }}
       >
-        {/* Row 1: Daisuke, Daichi, Yuki */}
-        {teamMembers.slice(0, 3).map(member => (
+        {teamMembers.map((member) => (
           <TeamCard key={member.name} member={member} />
         ))}
-        {/* Row 2: Dolma, Jerelyn + invisible spacer so columns stay aligned */}
-        <TeamCard member={teamMembers[3]} />
-        <TeamCard member={teamMembers[4]} />
-        <div
-          aria-hidden="true"
-          style={{ width: "376px", height: "426px", visibility: "hidden" }}
-        />
       </div>
     </section>
   );
