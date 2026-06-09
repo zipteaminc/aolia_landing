@@ -1,3 +1,5 @@
+import { publicAsset } from "@/lib/assets";
+
 /**
  * PilotSection — "Piloted with Claremont Graduate University."
  * Figma spec:
@@ -15,17 +17,17 @@ export default function PilotSection() {
       {/* Two-column layout — full width with 68px outer padding */}
       <div
         className="flex flex-col lg:flex-row"
-        style={{ paddingLeft: '68px', paddingRight: '68px' }}
+        style={{ paddingLeft: "68px", paddingRight: "68px" }}
       >
         {/* Left column — H2 + campus illustration, takes remaining space */}
-        <div className="flex-1" style={{ paddingRight: '40px' }}>
+        <div className="flex-1" style={{ paddingRight: "40px" }}>
           {/* H2 — DM Sans Bold 41px, margin-top 71px */}
           <h2
             className="font-body font-bold text-[#3E3A36]"
             style={{
-              fontSize: 'clamp(1.6rem, 3.2vw, 41px)',
+              fontSize: "clamp(1.6rem, 3.2vw, 41px)",
               lineHeight: 1.15,
-              marginTop: '71px',
+              marginTop: "71px",
             }}
           >
             Piloted with Claremont
@@ -35,13 +37,13 @@ export default function PilotSection() {
 
           {/* Campus illustration — 123×87px, margin-top 51px */}
           <img
-            src="/manus-storage/campus_44b88d1e.svg"
+            src={publicAsset("manus-storage/campus_44b88d1e.svg")}
             alt="Campus building illustration"
             style={{
-              width: '123px',
-              height: '87px',
-              marginTop: '51px',
-              display: 'block',
+              width: "123px",
+              height: "87px",
+              marginTop: "51px",
+              display: "block",
             }}
           />
         </div>
@@ -51,43 +53,44 @@ export default function PilotSection() {
         <div
           className="lg:flex-shrink-0 flex flex-col"
           style={{
-            width: '588px',
-            maxWidth: '100%',
-            marginTop: '71px',
+            width: "588px",
+            maxWidth: "100%",
+            marginTop: "71px",
           }}
         >
           <div
             className="font-body font-normal text-[#3E3A36]"
-            style={{ fontSize: '16px', lineHeight: '25px' }}
+            style={{ fontSize: "16px", lineHeight: "25px" }}
           >
             <p>
-              Aolia is an initiative by Macnica, a global technology solutions company
-              headquartered in Japan.
+              Aolia is an initiative by Macnica, a global technology solutions
+              company headquartered in Japan.
             </p>
-            <p style={{ marginTop: '24px' }}>
-              Our early pilot work with Claremont Graduate University, home of the Drucker
-              School of Management, grounds the work in real assessment workflows, faculty
-              needs, and the practical challenges of accreditation.
+            <p style={{ marginTop: "24px" }}>
+              Our early pilot work with Claremont Graduate University, home of
+              the Drucker School of Management, grounds the work in real
+              assessment workflows, faculty needs, and the practical challenges
+              of accreditation.
             </p>
-            <p style={{ marginTop: '24px' }}>
-              We&rsquo;re starting with AACSB-accredited business schools, with the longer-term
-              goal of supporting accreditation and outcomes assessment across higher
-              education.
+            <p style={{ marginTop: "24px" }}>
+              We&rsquo;re starting with AACSB-accredited business schools, with
+              the longer-term goal of supporting accreditation and outcomes
+              assessment across higher education.
             </p>
           </div>
 
           {/* CGU logo — 396×32px, 46px below last paragraph, left-aligned with text block */}
           <img
-            src="/manus-storage/CGUlogo_d3dbd232.svg"
+            src={publicAsset("manus-storage/CGUlogo_d3dbd232.svg")}
             alt="Claremont Graduate University"
             style={{
-              marginTop: '46px',
-              width: '396px',
-              height: '32px',
-              maxWidth: '100%',
-              display: 'block',
-              objectFit: 'contain',
-              objectPosition: 'left center',
+              marginTop: "46px",
+              width: "396px",
+              height: "32px",
+              maxWidth: "100%",
+              display: "block",
+              objectFit: "contain",
+              objectPosition: "left center",
             }}
           />
         </div>

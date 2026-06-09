@@ -204,8 +204,12 @@ function vitePluginStorageProxy(): Plugin {
 }
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+const BASE_PATH =
+  process.env.VITE_BASE_PATH ||
+  (process.env.GITHUB_PAGES === "true" ? "/aolia_landing/" : "/");
 
 export default defineConfig({
+  base: BASE_PATH,
   plugins,
   resolve: {
     alias: {

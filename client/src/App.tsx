@@ -7,10 +7,18 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
 function Router() {
+  const basePath = (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/";
+  const homePaths = basePath === "/" ? ["/"] : [basePath, `${basePath}/`];
+
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
+      {homePaths.map(path => (
+        <Route key={path} path={path} component={Home} />
+      ))}
+      <Route
+        path={basePath === "/" ? "/404" : `${basePath}/404`}
+        component={NotFound}
+      />
       <Route component={NotFound} />
     </Switch>
   );

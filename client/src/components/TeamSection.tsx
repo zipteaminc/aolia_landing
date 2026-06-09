@@ -1,4 +1,6 @@
-import { useRef, useEffect, useState } from 'react';
+import { publicAsset } from "@/lib/assets";
+
+import { useRef, useEffect, useState } from "react";
 
 /**
  * TeamSection — "Who is behind this."
@@ -31,60 +33,61 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: 'Daisuke Nishimura',
-    role: 'Co-Founder & Managing Director',
-    description: 'Leading product strategy for AI-native assessment at Aolia.',
-    linkedinUrl: 'https://www.linkedin.com/in/daisuke-nishimura-9583055b/',
-    portraitSrc: '/manus-storage/Dai2_82e2eb01.svg',
-    portraitAlt: 'Daisuke Nishimura portrait illustration',
+    name: "Daisuke Nishimura",
+    role: "Co-Founder & Managing Director",
+    description: "Leading product strategy for AI-native assessment at Aolia.",
+    linkedinUrl: "https://www.linkedin.com/in/daisuke-nishimura-9583055b/",
+    portraitSrc: publicAsset("manus-storage/Dai2_82e2eb01.svg"),
+    portraitAlt: "Daisuke Nishimura portrait illustration",
     portraitWidth: 164,
     portraitHeight: 151,
     marginTopToPortrait: 38,
     marginPortraitToName: 38,
   },
   {
-    name: 'Daichi Yoshikawa',
-    role: 'Chief Engineer & Product Engineering Lead',
-    description: 'Leading end-to-end development of Aolia.',
-    linkedinUrl: 'https://www.linkedin.com/in/daichi-yoshikawa-profile/?skipRedirect=true',
-    portraitSrc: '/manus-storage/Daichi2_e74c8abd.svg',
-    portraitAlt: 'Daichi Yoshikawa portrait illustration',
+    name: "Daichi Yoshikawa",
+    role: "Chief Engineer & Product Engineering Lead",
+    description: "Leading end-to-end development of Aolia.",
+    linkedinUrl:
+      "https://www.linkedin.com/in/daichi-yoshikawa-profile/?skipRedirect=true",
+    portraitSrc: publicAsset("manus-storage/Daichi2_e74c8abd.svg"),
+    portraitAlt: "Daichi Yoshikawa portrait illustration",
     portraitWidth: 179,
     portraitHeight: 171,
     marginTopToPortrait: 38,
     marginPortraitToName: 18,
   },
   {
-    name: 'Yuki Baba',
-    role: 'DevOps Engineer',
-    description: 'Web application infrastructure development.',
-    linkedinUrl: 'https://www.linkedin.com/in/yuki-baba-6bba0a20a/',
-    portraitSrc: '/manus-storage/Yuki2_a685732d.svg',
-    portraitAlt: 'Yuki Baba portrait illustration',
+    name: "Yuki Baba",
+    role: "DevOps Engineer",
+    description: "Web application infrastructure development.",
+    linkedinUrl: "https://www.linkedin.com/in/yuki-baba-6bba0a20a/",
+    portraitSrc: publicAsset("manus-storage/Yuki2_a685732d.svg"),
+    portraitAlt: "Yuki Baba portrait illustration",
     portraitWidth: 196,
     portraitHeight: 171,
     marginTopToPortrait: 38,
     marginPortraitToName: 18,
   },
   {
-    name: 'Dolma Rawat',
-    role: 'Go to Market & Research Lead',
-    description: 'Lead product and customer research for Aolia.',
-    linkedinUrl: 'https://www.linkedin.com/in/dolmarawat/',
-    portraitSrc: '/manus-storage/Dolma2_7b785351.svg',
-    portraitAlt: 'Dolma Rawat portrait illustration',
+    name: "Dolma Rawat",
+    role: "Go to Market & Research Lead",
+    description: "Lead product and customer research for Aolia.",
+    linkedinUrl: "https://www.linkedin.com/in/dolmarawat/",
+    portraitSrc: publicAsset("manus-storage/Dolma2_7b785351.svg"),
+    portraitAlt: "Dolma Rawat portrait illustration",
     portraitWidth: 198,
     portraitHeight: 162,
     marginTopToPortrait: 38,
     marginPortraitToName: 27,
   },
   {
-    name: 'Jerelyn Co',
-    role: 'AI Technical Lead',
-    description: 'Leads the technical strategy of the AI team.',
-    linkedinUrl: 'https://www.linkedin.com/in/jerelyn-co',
-    portraitSrc: '/manus-storage/Jerelyn2_48c1cd2c.svg',
-    portraitAlt: 'Jerelyn Co portrait illustration',
+    name: "Jerelyn Co",
+    role: "AI Technical Lead",
+    description: "Leads the technical strategy of the AI team.",
+    linkedinUrl: "https://www.linkedin.com/in/jerelyn-co",
+    portraitSrc: publicAsset("manus-storage/Jerelyn2_48c1cd2c.svg"),
+    portraitAlt: "Jerelyn Co portrait illustration",
     portraitWidth: 153,
     portraitHeight: 162,
     marginTopToPortrait: 38,
@@ -97,13 +100,13 @@ function TeamCard({ member }: { member: TeamMember }) {
     <article
       className="flex flex-col items-center text-center"
       style={{
-        backgroundColor: '#B5A898',
-        borderRadius: '16px',
-        width: '376px',
-        minWidth: '376px',
-        height: '426px',
-        padding: '0 24px',
-        overflow: 'hidden',
+        backgroundColor: "#B5A898",
+        borderRadius: "16px",
+        width: "376px",
+        minWidth: "376px",
+        height: "426px",
+        padding: "0 24px",
+        overflow: "hidden",
         flexShrink: 0,
       }}
     >
@@ -115,17 +118,17 @@ function TeamCard({ member }: { member: TeamMember }) {
           height: `${member.portraitHeight}px`,
           marginTop: `${member.marginTopToPortrait}px`,
           flexShrink: 0,
-          maxWidth: '100%',
+          maxWidth: "100%",
         }}
       >
         <img
           src={member.portraitSrc}
           alt={member.portraitAlt}
           style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain',
-            objectPosition: 'bottom',
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            objectPosition: "bottom",
           }}
         />
       </div>
@@ -134,8 +137,8 @@ function TeamCard({ member }: { member: TeamMember }) {
       <h3
         className="font-body font-medium text-[#3E3A36]"
         style={{
-          fontSize: '18px',
-          lineHeight: '24px',
+          fontSize: "18px",
+          lineHeight: "24px",
           marginTop: `${member.marginPortraitToName}px`,
         }}
       >
@@ -145,7 +148,7 @@ function TeamCard({ member }: { member: TeamMember }) {
       {/* Role */}
       <p
         className="font-body font-light text-[#3E3A36]"
-        style={{ fontSize: '14px', lineHeight: '20px', marginTop: '4px' }}
+        style={{ fontSize: "14px", lineHeight: "20px", marginTop: "4px" }}
       >
         {member.role}
       </p>
@@ -154,10 +157,10 @@ function TeamCard({ member }: { member: TeamMember }) {
       <p
         className="font-body font-normal text-[#3E3A36]"
         style={{
-          fontSize: '15px',
-          lineHeight: '22px',
-          maxWidth: '285px',
-          marginTop: '13px',
+          fontSize: "15px",
+          lineHeight: "22px",
+          maxWidth: "285px",
+          marginTop: "13px",
         }}
       >
         {member.description}
@@ -170,10 +173,10 @@ function TeamCard({ member }: { member: TeamMember }) {
         rel="noopener noreferrer"
         className="font-body text-[#3E3A36] hover:opacity-60 transition-opacity"
         style={{
-          fontSize: '14px',
+          fontSize: "14px",
           fontWeight: 600,
-          textDecoration: 'underline',
-          marginTop: '22px',
+          textDecoration: "underline",
+          marginTop: "22px",
         }}
         aria-label={`${member.name} on LinkedIn`}
       >
@@ -207,28 +210,28 @@ export default function TeamSection() {
   }, []);
 
   return (
-    <section className="w-full bg-[#F2EDE4]" style={{ paddingTop: '122px' }}>
+    <section className="w-full bg-[#F2EDE4]" style={{ paddingTop: "122px" }}>
       {/* Header area */}
-      <div style={{ paddingLeft: '68px', paddingRight: '68px' }}>
+      <div style={{ paddingLeft: "68px", paddingRight: "68px" }}>
         {/* H2 heading */}
         <h2
           className="font-body font-bold text-[#3E3A36]"
-          style={{ fontSize: 'clamp(1.6rem, 3.2vw, 41px)', lineHeight: 1.15 }}
+          style={{ fontSize: "clamp(1.6rem, 3.2vw, 41px)", lineHeight: 1.15 }}
         >
           Who is behind this.
         </h2>
 
         {/* Decorative line SVG — 362×11px, margin-top 6px from H2 */}
-        <div style={{ marginTop: '6px' }}>
+        <div style={{ marginTop: "6px" }}>
           <img
-            src="/manus-storage/line_40359aaf.svg"
+            src={publicAsset("manus-storage/line_40359aaf.svg")}
             alt=""
             aria-hidden="true"
             style={{
-              width: '362px',
-              height: '11px',
-              display: 'block',
-              maxWidth: '100%',
+              width: "362px",
+              height: "11px",
+              display: "block",
+              maxWidth: "100%",
             }}
           />
         </div>
@@ -237,10 +240,10 @@ export default function TeamSection() {
         <p
           className="font-body font-normal text-[#3E3A36]"
           style={{
-            fontSize: '19px',
-            lineHeight: '25px',
-            maxWidth: '638px',
-            marginTop: '20px',
+            fontSize: "19px",
+            lineHeight: "25px",
+            maxWidth: "638px",
+            marginTop: "20px",
           }}
         >
           We&rsquo;re a team exploring how assessment for accreditation can work
@@ -253,23 +256,26 @@ export default function TeamSection() {
       <div
         ref={gridRef}
         style={{
-          paddingLeft: '68px',
-          paddingRight: '68px',
-          marginTop: '62px',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 376px)',
-          justifyContent: 'space-between',
+          paddingLeft: "68px",
+          paddingRight: "68px",
+          marginTop: "62px",
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 376px)",
+          justifyContent: "space-between",
           rowGap: `${rowGap}px`,
         }}
       >
         {/* Row 1: Daisuke, Daichi, Yuki */}
-        {teamMembers.slice(0, 3).map((member) => (
+        {teamMembers.slice(0, 3).map(member => (
           <TeamCard key={member.name} member={member} />
         ))}
         {/* Row 2: Dolma, Jerelyn + invisible spacer so columns stay aligned */}
         <TeamCard member={teamMembers[3]} />
         <TeamCard member={teamMembers[4]} />
-        <div aria-hidden="true" style={{ width: '376px', height: '426px', visibility: 'hidden' }} />
+        <div
+          aria-hidden="true"
+          style={{ width: "376px", height: "426px", visibility: "hidden" }}
+        />
       </div>
     </section>
   );
