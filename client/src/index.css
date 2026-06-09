@@ -1,0 +1,151 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * AOLIA DESIGN SYSTEM
+ * Design Movement: Minimalist Editorial — academic journal meets thoughtful publication design
+ * Color Philosophy: Warm neutrals (parchment, stone, sage) evoking scholarly trust and calm focus
+ * Typography: DM Serif Display (H1 editorial) + DM Sans (all other text — clean, readable)
+ * Layout: Asymmetric two-column sections with generous whitespace
+ * Brand Colors: #3E3A36 (dark), #F2EDE4 (cream), #78A287 (sage), #B5A898 (stone), #3D5A47 (forest)
+ *
+ * Typography Spec:
+ * H1: DM Serif Display, Regular, 54px / 60px lh
+ * H2: DM Sans, Bold, 41px
+ * Hero subheading: DM Sans, Regular, 18px / 29px lh
+ * Section subheading: DM Sans, Regular, 19px
+ * Body: DM Sans, Regular, 16px / 25px lh
+ * Quote: DM Sans, Semibold, 26px / 36px lh
+ * Author: DM Sans, Regular, 14px / 20px lh
+ * Team name: DM Sans, Medium, 18px / 24px lh
+ * Team title: DM Sans, Light, 14px / 24px lh
+ * Team desc: DM Sans, Regular, 15px / 24px lh
+ * LinkedIn: DM Sans, Semibold, 14px / 24px lh
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Aolia brand colors */
+  --color-aolia-dark: #3E3A36;
+  --color-aolia-cream: #F2EDE4;
+  --color-aolia-sage: #78A287;
+  --color-aolia-stone: #B5A898;
+  --color-aolia-forest: #3D5A47;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.963 0.009 80);
+  --foreground: oklch(0.235 0.015 65);
+  --card: oklch(0.97 0.007 80);
+  --card-foreground: oklch(0.235 0.015 65);
+  --popover: oklch(0.97 0.007 80);
+  --popover-foreground: oklch(0.235 0.015 65);
+  --primary: oklch(0.45 0.06 155);
+  --primary-foreground: oklch(0.97 0.007 80);
+  --secondary: oklch(0.92 0.012 75);
+  --secondary-foreground: oklch(0.35 0.015 65);
+  --muted: oklch(0.93 0.01 78);
+  --muted-foreground: oklch(0.52 0.018 70);
+  --accent: oklch(0.92 0.012 75);
+  --accent-foreground: oklch(0.235 0.015 65);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.87 0.015 75);
+  --input: oklch(0.87 0.015 75);
+  --ring: oklch(0.45 0.06 155);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      max-width: 1440px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+
+  /* Typography utilities */
+  .font-display {
+    font-family: 'DM Serif Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+}
