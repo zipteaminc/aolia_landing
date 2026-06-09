@@ -20,7 +20,7 @@ export default function CTASection() {
     e.preventDefault();
     if (!email) return;
     window.open(
-      `https://aoliaai.substack.com/subscribe?email=${encodeURIComponent(email)}`,
+      `https://blog.aolia.ai/subscribe?email=${encodeURIComponent(email)}`,
       '_blank',
       'noopener,noreferrer'
     );
@@ -76,7 +76,7 @@ export default function CTASection() {
                 borderRadius: '8px',
                 border: '1px solid rgba(255,255,255,0.25)',
               }}
-              aria-label="Subscribe to Aolia on Substack"
+              aria-label="Subscribe to Aolia blog"
             >
               <input
                 type="email"

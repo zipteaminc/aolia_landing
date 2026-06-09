@@ -1,3 +1,7 @@
+import textLockupLogo from "@/assets/logos/text-lockup-light.svg";
+
+const homeHref = import.meta.env.BASE_URL || "/";
+
 /**
  * Navbar — Aolia Landing Page
  * Figma spec:
@@ -12,36 +16,36 @@ export default function Navbar() {
       {/* Full-width nav with precise pixel margins matching Figma */}
       <nav
         className="flex items-start justify-between"
-        style={{ paddingLeft: '68px', paddingRight: '68px' }}
+        style={{ paddingLeft: "68px", paddingRight: "68px" }}
         aria-label="Main navigation"
       >
         {/* Logo — TextLockup SVG: 172×55px, margin-top 32px */}
         <a
-          href="/"
+          href={homeHref}
           aria-label="Aolia — from Macnica, Inc."
-          style={{ marginTop: '32px', display: 'block', flexShrink: 0 }}
+          style={{ marginTop: "32px", display: "block", flexShrink: 0 }}
         >
           <img
-            src="/manus-storage/TextLockup_ForLightBackgrounds1_a559b93f.svg"
+            src={textLockupLogo}
             alt="Aolia — from Macnica, Inc."
-            style={{ width: '172px', height: '55px', objectFit: 'contain' }}
+            style={{ width: "172px", height: "55px", objectFit: "contain" }}
           />
         </a>
 
         {/* Blog link — DM Sans Regular 19px, margin-top 49px, margin-right 0 (handled by padding) */}
         <a
-          href="https://aoliaai.substack.com/"
+          href="https://blog.aolia.ai"
           target="_blank"
           rel="noopener noreferrer"
           className="font-body font-normal text-[#3E3A36] transition-opacity hover:opacity-60"
           style={{
-            marginTop: '49px',
-            fontSize: '19px',
-            lineHeight: '25px',
-            textDecoration: 'none',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
+            marginTop: "49px",
+            fontSize: "19px",
+            lineHeight: "25px",
+            textDecoration: "none",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
             flexShrink: 0,
           }}
           aria-label="Blog"
@@ -50,11 +54,11 @@ export default function Navbar() {
           {/* Custom 36px underline, 1px stroke, 2px gap below text */}
           <span
             style={{
-              display: 'block',
-              width: '36px',
-              height: '1px',
-              backgroundColor: '#3E3A36',
-              marginTop: '2px',
+              display: "block",
+              width: "36px",
+              height: "1px",
+              backgroundColor: "#3E3A36",
+              marginTop: "2px",
             }}
             aria-hidden="true"
           />
