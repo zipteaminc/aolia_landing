@@ -1,4 +1,4 @@
-import rubricsIllustration from "@/assets/illustrations/rubrics.png";
+import rubricsIllustration from "@/assets/illustrations/rubrics.svg";
 
 /**
  * ProblemSection — "Assessment for accreditation is hard."

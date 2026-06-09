@@ -1,4 +1,4 @@
-import topIllustration from "@/assets/illustrations/top-illustration.png";
+import topIllustration from "@/assets/illustrations/top-illustration.svg";
 
 /**
  * HeroSection — Aolia Landing Page
@@ -18,13 +18,13 @@ export default function HeroSection() {
     e.preventDefault();
     if (email.trim()) {
       window.open(
-        `https://aoliaai.substack.com/subscribe?email=${encodeURIComponent(email.trim())}`,
+        `https://blog.aolia.ai/subscribe?email=${encodeURIComponent(email.trim())}`,
         "_blank",
         "noopener,noreferrer"
       );
     } else {
       window.open(
-        "https://aoliaai.substack.com/subscribe",
+        "https://blog.aolia.ai/subscribe",
         "_blank",
         "noopener,noreferrer"
       );

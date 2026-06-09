@@ -53,7 +53,7 @@ export default function Footer() {
           aria-label="Footer navigation"
         >
           <a
-            href="https://aoliaai.substack.com/"
+            href="https://blog.aolia.ai"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body font-normal text-white hover:opacity-60 transition-opacity"
