@@ -1,4 +1,4 @@
-import { publicAsset } from "@/lib/assets";
+import topIllustration from "@/assets/illustrations/top-illustration.png";
 
 /**
  * HeroSection — Aolia Landing Page
@@ -208,7 +208,7 @@ export default function HeroSection() {
       {/* Hero illustration — 828×463px, 65px below CTA form */}
       <div className="flex justify-center" style={{ marginTop: "65px" }}>
         <img
-          src={publicAsset("manus-storage/top-illustration_fcaed4d4.svg")}
+          src={topIllustration}
           alt="Scholar at desk with books and lamp — editorial illustration"
           style={{
             width: "828px",

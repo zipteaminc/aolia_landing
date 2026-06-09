@@ -1,4 +1,9 @@
-import { publicAsset } from "@/lib/assets";
+import daichiYoshikawaPortrait from "@/assets/team/daichi-yoshikawa.png";
+import daisukeNishimuraPortrait from "@/assets/team/daisuke-nishimura.png";
+import dolmaRawatPortrait from "@/assets/team/dolma-rawat.png";
+import jerelynCoPortrait from "@/assets/team/jerelyn-co.png";
+import teamLine from "@/assets/illustrations/team-line.svg";
+import yukiBabaPortrait from "@/assets/team/yuki-baba.png";
 
 import { useRef, useEffect, useState } from "react";
 
@@ -37,7 +42,7 @@ const teamMembers: TeamMember[] = [
     role: "Co-Founder & Managing Director",
     description: "Leading product strategy for AI-native assessment at Aolia.",
     linkedinUrl: "https://www.linkedin.com/in/daisuke-nishimura-9583055b/",
-    portraitSrc: publicAsset("manus-storage/Dai2_82e2eb01.svg"),
+    portraitSrc: daisukeNishimuraPortrait,
     portraitAlt: "Daisuke Nishimura portrait illustration",
     portraitWidth: 164,
     portraitHeight: 151,
@@ -50,7 +55,7 @@ const teamMembers: TeamMember[] = [
     description: "Leading end-to-end development of Aolia.",
     linkedinUrl:
       "https://www.linkedin.com/in/daichi-yoshikawa-profile/?skipRedirect=true",
-    portraitSrc: publicAsset("manus-storage/Daichi2_e74c8abd.svg"),
+    portraitSrc: daichiYoshikawaPortrait,
     portraitAlt: "Daichi Yoshikawa portrait illustration",
     portraitWidth: 179,
     portraitHeight: 171,
@@ -62,7 +67,7 @@ const teamMembers: TeamMember[] = [
     role: "DevOps Engineer",
     description: "Web application infrastructure development.",
     linkedinUrl: "https://www.linkedin.com/in/yuki-baba-6bba0a20a/",
-    portraitSrc: publicAsset("manus-storage/Yuki2_a685732d.svg"),
+    portraitSrc: yukiBabaPortrait,
     portraitAlt: "Yuki Baba portrait illustration",
     portraitWidth: 196,
     portraitHeight: 171,
@@ -74,7 +79,7 @@ const teamMembers: TeamMember[] = [
     role: "Go to Market & Research Lead",
     description: "Lead product and customer research for Aolia.",
     linkedinUrl: "https://www.linkedin.com/in/dolmarawat/",
-    portraitSrc: publicAsset("manus-storage/Dolma2_7b785351.svg"),
+    portraitSrc: dolmaRawatPortrait,
     portraitAlt: "Dolma Rawat portrait illustration",
     portraitWidth: 198,
     portraitHeight: 162,
@@ -86,7 +91,7 @@ const teamMembers: TeamMember[] = [
     role: "AI Technical Lead",
     description: "Leads the technical strategy of the AI team.",
     linkedinUrl: "https://www.linkedin.com/in/jerelyn-co",
-    portraitSrc: publicAsset("manus-storage/Jerelyn2_48c1cd2c.svg"),
+    portraitSrc: jerelynCoPortrait,
     portraitAlt: "Jerelyn Co portrait illustration",
     portraitWidth: 153,
     portraitHeight: 162,
@@ -224,7 +229,7 @@ export default function TeamSection() {
         {/* Decorative line SVG — 362×11px, margin-top 6px from H2 */}
         <div style={{ marginTop: "6px" }}>
           <img
-            src={publicAsset("manus-storage/line_40359aaf.svg")}
+            src={teamLine}
             alt=""
             aria-hidden="true"
             style={{

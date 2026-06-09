@@ -1,4 +1,4 @@
-import { publicAsset } from "@/lib/assets";
+import fullLogo from "@/assets/logos/full-logo-gradient-icon-dark.svg";
 
 const homeHref = import.meta.env.BASE_URL || "/";
 
@@ -33,9 +33,7 @@ export default function Footer() {
           className="hover:opacity-80 transition-opacity flex-shrink-0"
         >
           <img
-            src={publicAsset(
-              "manus-storage/FullLogo_GradientIcon_ForDarkBackgrounds_790b6b15.svg"
-            )}
+            src={fullLogo}
             alt="Aolia"
             style={{ width: "95px", height: "23px", objectFit: "contain" }}
           />

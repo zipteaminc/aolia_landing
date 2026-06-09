@@ -1,4 +1,5 @@
-import { publicAsset } from "@/lib/assets";
+import campusIllustration from "@/assets/illustrations/campus.svg";
+import cguLogo from "@/assets/logos/cgu-logo.svg";
 
 /**
  * PilotSection — "Piloted with Claremont Graduate University."
@@ -37,7 +38,7 @@ export default function PilotSection() {
 
           {/* Campus illustration — 123×87px, margin-top 51px */}
           <img
-            src={publicAsset("manus-storage/campus_44b88d1e.svg")}
+            src={campusIllustration}
             alt="Campus building illustration"
             style={{
               width: "123px",
@@ -81,7 +82,7 @@ export default function PilotSection() {
 
           {/* CGU logo — 396×32px, 46px below last paragraph, left-aligned with text block */}
           <img
-            src={publicAsset("manus-storage/CGUlogo_d3dbd232.svg")}
+            src={cguLogo}
             alt="Claremont Graduate University"
             style={{
               marginTop: "46px",

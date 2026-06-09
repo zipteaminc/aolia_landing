@@ -1,4 +1,4 @@
-import { publicAsset } from "@/lib/assets";
+import rubricsIllustration from "@/assets/illustrations/rubrics.png";
 
 /**
  * ProblemSection — "Assessment for accreditation is hard."
@@ -55,7 +55,7 @@ export default function ProblemSection() {
 
           {/* Rubrics illustration — 94×80px, margin-top 51px */}
           <img
-            src={publicAsset("manus-storage/rubrics_cf03f129.svg")}
+            src={rubricsIllustration}
             alt="Rubrics grid illustration"
             style={{
               width: "94px",

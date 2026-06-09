@@ -1,4 +1,4 @@
-import { publicAsset } from "@/lib/assets";
+import textLockupLogo from "@/assets/logos/text-lockup-light.svg";
 
 const homeHref = import.meta.env.BASE_URL || "/";
 
@@ -26,9 +26,7 @@ export default function Navbar() {
           style={{ marginTop: "32px", display: "block", flexShrink: 0 }}
         >
           <img
-            src={publicAsset(
-              "manus-storage/TextLockup_ForLightBackgrounds1_a559b93f.svg"
-            )}
+            src={textLockupLogo}
             alt="Aolia — from Macnica, Inc."
             style={{ width: "172px", height: "55px", objectFit: "contain" }}
           />
