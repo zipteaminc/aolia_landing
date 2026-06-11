@@ -1,4 +1,4 @@
-import topIllustration from "@/assets/illustrations/top-illustration.svg";
+import topIllustration from "@/assets/illustrations/top-illustration.webp";
 
 /**
  * HeroSection — Aolia Landing Page

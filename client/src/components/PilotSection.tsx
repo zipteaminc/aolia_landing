@@ -1,4 +1,4 @@
-import campusIllustration from "@/assets/illustrations/campus.svg";
+import campusIllustration from "@/assets/illustrations/campus.webp";
 import cguLogo from "@/assets/logos/cgu-logo.svg";
 
 /**
