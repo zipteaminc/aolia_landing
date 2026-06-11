@@ -13,7 +13,7 @@ import { useRef, useEffect, useState } from 'react';
  * Figma spec:
  * - Margin-top 122px from quote container bottom
  * - Margin-left 68px, H2 with period
- * - Line SVG: width 362px, height 11px, margin-left 68px, margin-top 6px (from H2)
+ * - Line SVG: width 363px, height 12px, margin-left 91px, margin-top 6px (from H2)
  * - Supporting text: max-width 638px, below the line (margin-top 20px)
  * - 62px gap between supporting text and team cards
  * - Card dimensions: exactly 376×426px
@@ -252,15 +252,15 @@ export default function TeamSection() {
           Who is behind this.
         </h2>
 
-        {/* Decorative line SVG — 362×11px, margin-top 6px from H2, shifted 3px left */}
-        <div style={{ marginTop: '6px', marginLeft: '-3px' }}>
+        {/* Decorative hand-drawn underline SVG — 363×12px, margin-top 6px from H2 */}
+        <div style={{ marginTop: '6px', marginLeft: '23px' }}>
           <img
             src={teamLine}
             alt=""
             aria-hidden="true"
             style={{
-              width: '362px',
-              height: '11px',
+              width: '363px',
+              height: '12px',
               display: 'block',
               maxWidth: '100%',
             }}
