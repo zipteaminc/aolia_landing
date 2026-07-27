@@ -6,12 +6,16 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+const homePaths = basePath ? [basePath, `${basePath}/`] : ["/"];
+const notFoundPath = basePath ? `${basePath}/404` : "/404";
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
+      {homePaths.map((path) => (
+        <Route key={path} path={path} component={Home} />
+      ))}
+      <Route path={notFoundPath} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
