@@ -52,7 +52,7 @@ export default function Footer() {
           aria-label="Footer navigation"
         >
           <a
-            href="https://aoliaai.substack.com/"
+            href="https://blog.aolia.ai/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body font-normal text-white hover:opacity-60 transition-opacity"
@@ -66,6 +66,15 @@ export default function Footer() {
             style={{ fontSize: '14px' }}
           >
             Contact
+          </a>
+          <a
+            href="https://www.linkedin.com/company/aoliaai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body font-normal text-white hover:opacity-60 transition-opacity"
+            style={{ fontSize: '14px' }}
+          >
+            LinkedIn
           </a>
         </nav>
       </div>

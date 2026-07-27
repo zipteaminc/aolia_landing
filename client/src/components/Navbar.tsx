@@ -30,7 +30,7 @@ export default function Navbar() {
 
         {/* Blog link — DM Sans Regular 19px, margin-top 49px, margin-right 0 (handled by padding) */}
         <a
-          href="https://aoliaai.substack.com/"
+          href="https://blog.aolia.ai/"
           target="_blank"
           rel="noopener noreferrer"
           className="font-body font-normal text-[#3E3A36] transition-opacity hover:opacity-60"

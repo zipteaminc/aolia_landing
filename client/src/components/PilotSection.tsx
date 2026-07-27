@@ -28,18 +28,18 @@ export default function PilotSection() {
               marginTop: '71px',
             }}
           >
-            Piloted with Claremont
+            Piloting with Claremont
             <br />
             Graduate University.
           </h2>
 
-          {/* Campus illustration — 123×87px, margin-top 51px */}
+          {/* CGU illustration — 126×98px, margin-top 51px */}
           <img
-            src="/manus-storage/campus_44b88d1e.svg"
-            alt="Campus building illustration"
+            src="/manus-storage/CGU_0932fa1b.webp"
+            alt="Claremont Graduate University building illustration"
             style={{
-              width: '123px',
-              height: '87px',
+              width: '126px',
+              height: '98px',
               marginTop: '51px',
               display: 'block',
             }}

@@ -7,7 +7,7 @@
  * 4. Pilot (Claremont Graduate University)
  * 5. Testimonial (Dean Sprott quote)
  * 6. Team (Who is behind this)
- * 7. From the field (empty post cards)
+ * 7. From the field (live RSS post cards)
  * 8. CTA (Follow the work)
  * 9. Footer
  */

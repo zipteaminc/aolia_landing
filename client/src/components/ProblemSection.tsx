@@ -15,7 +15,7 @@ export default function ProblemSection() {
       {/* Top divider — 92px below illustration */}
       <div
         style={{
-          marginTop: '92px',
+          marginTop: '90px',
           marginLeft: '68px',
           marginRight: '68px',
           height: '1px',
@@ -51,7 +51,7 @@ export default function ProblemSection() {
 
           {/* Rubrics illustration — 94×80px, margin-top 51px */}
           <img
-            src="/manus-storage/rubrics_cf03f129.svg"
+            src="/manus-storage/rubrics_0a11fc5b.png"
             alt="Rubrics grid illustration"
             style={{
               width: '94px',
