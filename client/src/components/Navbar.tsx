@@ -6,6 +6,8 @@
  * - Blog underline: 36px wide, 1px stroke, 2px gap
  */
 
+import textLockup from '@assets/text-lockup-light-DZHL75RO.svg';
+
 export default function Navbar() {
   return (
     <header className="w-full bg-[#F2EDE4]">
@@ -22,7 +24,7 @@ export default function Navbar() {
           style={{ marginTop: '32px', display: 'block', flexShrink: 0 }}
         >
           <img
-            src="/manus-storage/TextLockup_ForLightBackgrounds1_a559b93f.svg"
+            src={textLockup}
             alt="Aolia — from Macnica, Inc."
             style={{ width: '172px', height: '55px', objectFit: 'contain' }}
           />

@@ -8,6 +8,8 @@
  * - Blog + Contacts: margin-right 68px, DM Sans Regular 14px
  */
 
+import fullLogo from '@assets/full-logo-gradient-dark.svg';
+
 export default function Footer() {
   return (
     <footer
@@ -32,7 +34,7 @@ export default function Footer() {
           className="hover:opacity-80 transition-opacity flex-shrink-0"
         >
           <img
-            src="/manus-storage/FullLogo_GradientIcon_ForDarkBackgrounds_790b6b15.svg"
+            src={fullLogo}
             alt="Aolia"
             style={{ width: '95px', height: '23px', objectFit: 'contain' }}
           />

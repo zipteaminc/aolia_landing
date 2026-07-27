@@ -8,6 +8,7 @@
  */
 
 import { useState } from 'react';
+import topIllustration from '@assets/top-illustration-Qjq-rb75.webp';
 
 export default function HeroSection() {
   const [email, setEmail] = useState('');
@@ -120,7 +121,7 @@ export default function HeroSection() {
         style={{ marginTop: '65px' }}
       >
         <img
-          src="/manus-storage/topillustration_f09e0076.webp"
+          src={topIllustration}
           alt="Scholar at desk with books and lamp — editorial illustration"
           style={{
             width: '843px',
