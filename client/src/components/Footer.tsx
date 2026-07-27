@@ -1,7 +1,3 @@
-import fullLogo from "@/assets/logos/full-logo-gradient-icon-dark.svg";
-
-const homeHref = import.meta.env.BASE_URL || "/";
-
 /**
  * Footer — Aolia Landing Page
  * Figma spec:
@@ -31,12 +27,12 @@ export default function Footer() {
       >
         {/* Logo — FullLogo_GradientIcon_ForDarkBackgrounds, 95×23px */}
         <a
-          href={homeHref}
+          href="/"
           aria-label="Aolia home"
           className="hover:opacity-80 transition-opacity flex-shrink-0"
         >
           <img
-            src={fullLogo}
+            src="/manus-storage/FullLogo_GradientIcon_ForDarkBackgrounds_790b6b15.svg"
             alt="Aolia"
             style={{ width: '95px', height: '23px', objectFit: 'contain' }}
           />
@@ -56,7 +52,7 @@ export default function Footer() {
           aria-label="Footer navigation"
         >
           <a
-            href="https://blog.aolia.ai"
+            href="https://blog.aolia.ai/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body font-normal text-white hover:opacity-60 transition-opacity"
@@ -70,6 +66,15 @@ export default function Footer() {
             style={{ fontSize: '14px' }}
           >
             Contact
+          </a>
+          <a
+            href="https://www.linkedin.com/company/aoliaai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body font-normal text-white hover:opacity-60 transition-opacity"
+            style={{ fontSize: '14px' }}
+          >
+            LinkedIn
           </a>
         </nav>
       </div>

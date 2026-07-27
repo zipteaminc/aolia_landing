@@ -6,7 +6,7 @@
  * - Supporting text: width 529px, white, DM Sans Regular 19px/25px, margin-top 19px
  * - 41px gap between supporting text and subscribe form
  * - Disclaimer: 2 lines, fully visible on dark background
- * - Aolia blog subscription watermark below disclaimer
+ * - Substack watermark below disclaimer
  */
 
 import { useState } from 'react';
@@ -75,7 +75,7 @@ export default function CTASection() {
                 borderRadius: '8px',
                 border: '1px solid rgba(255,255,255,0.25)',
               }}
-              aria-label="Subscribe to Aolia blog"
+              aria-label="Subscribe to Aolia on Substack"
             >
               <input
                 type="email"
