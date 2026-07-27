@@ -2,12 +2,12 @@
  * Home — Aolia Landing Page
  * Sections in order:
  * 1. Navbar
- * 2. Hero (headline + blog subscription embed + top illustration)
+ * 2. Hero (headline + Substack embed + top illustration)
  * 3. Problem (Assessment is hard)
  * 4. Pilot (Claremont Graduate University)
  * 5. Testimonial (Dean Sprott quote)
  * 6. Team (Who is behind this)
- * 7. From the field (empty post cards)
+ * 7. From the field (live RSS post cards)
  * 8. CTA (Follow the work)
  * 9. Footer
  */

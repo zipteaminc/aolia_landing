@@ -1,7 +1,3 @@
-import textLockupLogo from "@/assets/logos/text-lockup-light.svg";
-
-const homeHref = import.meta.env.BASE_URL || "/";
-
 /**
  * Navbar — Aolia Landing Page
  * Figma spec:
@@ -21,12 +17,12 @@ export default function Navbar() {
       >
         {/* Logo — TextLockup SVG: 172×55px, margin-top 32px */}
         <a
-          href={homeHref}
+          href="/"
           aria-label="Aolia — from Macnica, Inc."
           style={{ marginTop: '32px', display: 'block', flexShrink: 0 }}
         >
           <img
-            src={textLockupLogo}
+            src="/manus-storage/TextLockup_ForLightBackgrounds1_a559b93f.svg"
             alt="Aolia — from Macnica, Inc."
             style={{ width: '172px', height: '55px', objectFit: 'contain' }}
           />
@@ -34,7 +30,7 @@ export default function Navbar() {
 
         {/* Blog link — DM Sans Regular 19px, margin-top 49px, margin-right 0 (handled by padding) */}
         <a
-          href="https://blog.aolia.ai"
+          href="https://blog.aolia.ai/"
           target="_blank"
           rel="noopener noreferrer"
           className="font-body font-normal text-[#3E3A36] transition-opacity hover:opacity-60"

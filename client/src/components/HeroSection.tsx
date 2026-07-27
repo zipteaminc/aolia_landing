@@ -1,5 +1,3 @@
-import topIllustration from "@/assets/illustrations/top-illustration.svg";
-
 /**
  * HeroSection — Aolia Landing Page
  * Figma spec:
@@ -122,7 +120,7 @@ export default function HeroSection() {
         style={{ marginTop: '65px' }}
       >
         <img
-          src={topIllustration}
+          src="/manus-storage/topillustration_f09e0076.webp"
           alt="Scholar at desk with books and lamp — editorial illustration"
           style={{
             width: '843px',

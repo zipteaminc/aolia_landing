@@ -1,6 +1,3 @@
-import campusIllustration from "@/assets/illustrations/campus.svg";
-import cguLogo from "@/assets/logos/cgu-logo.svg";
-
 /**
  * PilotSection — "Piloted with Claremont Graduate University."
  * Figma spec:
@@ -38,7 +35,7 @@ export default function PilotSection() {
 
           {/* CGU illustration — 126×98px, margin-top 51px */}
           <img
-            src={campusIllustration}
+            src="/manus-storage/CGU_0932fa1b.webp"
             alt="Claremont Graduate University building illustration"
             style={{
               width: '126px',
@@ -81,7 +78,7 @@ export default function PilotSection() {
 
           {/* CGU logo — 396×32px, 46px below last paragraph, left-aligned with text block */}
           <img
-            src={cguLogo}
+            src="/manus-storage/CGUlogo_d3dbd232.svg"
             alt="Claremont Graduate University"
             style={{
               marginTop: '46px',

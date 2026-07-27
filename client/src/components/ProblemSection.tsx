@@ -1,5 +1,3 @@
-import rubricsIllustration from "@/assets/illustrations/rubrics.svg";
-
 /**
  * ProblemSection — "Assessment for accreditation is hard."
  * Figma spec:
@@ -53,7 +51,7 @@ export default function ProblemSection() {
 
           {/* Rubrics illustration — 94×80px, margin-top 51px */}
           <img
-            src={rubricsIllustration}
+            src="/manus-storage/rubrics_0a11fc5b.png"
             alt="Rubrics grid illustration"
             style={{
               width: '94px',

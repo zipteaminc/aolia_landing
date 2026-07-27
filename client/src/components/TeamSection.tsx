@@ -1,11 +1,3 @@
-import teamLine from "@/assets/illustrations/team-line.svg";
-import daichiYoshikawaPortrait from "@/assets/team/daichi-yoshikawa.png";
-import daisukeNishimuraPortrait from "@/assets/team/daisuke-nishimura.png";
-import dolmaRawatPortrait from "@/assets/team/dolma-rawat.png";
-import jerelynCoPortrait from "@/assets/team/jerelyn-co.png";
-import karynaShkodaPortrait from "@/assets/team/karyna-shkoda.png";
-import yukiBabaPortrait from "@/assets/team/yuki-baba.png";
-
 import { useRef, useEffect, useState } from 'react';
 
 /**
@@ -44,7 +36,7 @@ const teamMembers: TeamMember[] = [
     role: 'Co-Founder & Managing Director',
     description: 'Leading product strategy for AI-native assessment at Aolia.',
     linkedinUrl: 'https://www.linkedin.com/in/daisuke-nishimura-9583055b/',
-    portraitSrc: daisukeNishimuraPortrait,
+    portraitSrc: '/manus-storage/DaisukeNishimura_7385c8d0.webp',
     portraitAlt: 'Daisuke Nishimura portrait illustration',
     portraitWidth: 164,
     portraitHeight: 151,
@@ -56,7 +48,7 @@ const teamMembers: TeamMember[] = [
     role: 'Chief Engineer & Product Engineering Lead',
     description: 'Leading end-to-end development of Aolia.',
     linkedinUrl: 'https://www.linkedin.com/in/daichi-yoshikawa-profile/?skipRedirect=true',
-    portraitSrc: daichiYoshikawaPortrait,
+    portraitSrc: '/manus-storage/DaichiYoshikawa_70911347.webp',
     portraitAlt: 'Daichi Yoshikawa portrait illustration',
     portraitWidth: 173.57,
     portraitHeight: 156,
@@ -68,7 +60,7 @@ const teamMembers: TeamMember[] = [
     role: 'DevOps Engineer',
     description: 'Web application infrastructure development.',
     linkedinUrl: 'https://www.linkedin.com/in/yuki-baba-6bba0a20a/',
-    portraitSrc: yukiBabaPortrait,
+    portraitSrc: '/manus-storage/YukiBaba_77b7df4d.webp',
     portraitAlt: 'Yuki Baba portrait illustration',
     portraitWidth: 168.16,
     portraitHeight: 160,
@@ -80,7 +72,7 @@ const teamMembers: TeamMember[] = [
     role: 'Go to Market & Research Lead',
     description: 'Lead product and customer research for Aolia.',
     linkedinUrl: 'https://www.linkedin.com/in/dolmarawat/',
-    portraitSrc: dolmaRawatPortrait,
+    portraitSrc: '/manus-storage/DolmaRawat_56450563.webp',
     portraitAlt: 'Dolma Rawat portrait illustration',
     portraitWidth: 171.66,
     portraitHeight: 161.98,
@@ -92,7 +84,7 @@ const teamMembers: TeamMember[] = [
     role: 'AI Technical Lead',
     description: 'Leads the technical strategy of the AI team.',
     linkedinUrl: 'https://www.linkedin.com/in/jerelyn-co',
-    portraitSrc: jerelynCoPortrait,
+    portraitSrc: '/manus-storage/JerelynCo_2a633a15.webp',
     portraitAlt: 'Jerelyn Co portrait illustration',
     portraitWidth: 153.1,
     portraitHeight: 162,
@@ -104,7 +96,7 @@ const teamMembers: TeamMember[] = [
     role: 'Marketing Specialist',
     description: 'Focused on content and marketing strategy.',
     linkedinUrl: 'https://www.linkedin.com/in/karyna-shkoda/',
-    portraitSrc: karynaShkodaPortrait,
+    portraitSrc: '/manus-storage/KarynaShkoda_5baa21a0.webp',
     portraitAlt: 'Karyna Shkoda portrait illustration',
     portraitWidth: 175.23,
     portraitHeight: 160,
@@ -255,7 +247,7 @@ export default function TeamSection() {
         {/* Decorative line SVG — 362×11px, margin-top 6px from H2, shifted 3px left */}
         <div style={{ marginTop: '6px', marginLeft: '-3px' }}>
           <img
-            src={teamLine}
+            src="/manus-storage/line_40359aaf.svg"
             alt=""
             aria-hidden="true"
             style={{
