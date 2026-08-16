@@ -8,6 +8,8 @@
  * - Blog + Contacts: margin-right 68px, DM Sans Regular 14px
  */
 
+import fullLogo from '@assets/full-logo-gradient-dark.svg';
+
 export default function Footer() {
   return (
     <footer
@@ -32,7 +34,7 @@ export default function Footer() {
           className="hover:opacity-80 transition-opacity flex-shrink-0"
         >
           <img
-            src="/manus-storage/FullLogo_GradientIcon_ForDarkBackgrounds_790b6b15.svg"
+            src={fullLogo}
             alt="Aolia"
             style={{ width: '95px', height: '23px', objectFit: 'contain' }}
           />
@@ -52,7 +54,7 @@ export default function Footer() {
           aria-label="Footer navigation"
         >
           <a
-            href="https://aoliaai.substack.com/"
+            href="https://blog.aolia.ai/"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body font-normal text-white hover:opacity-60 transition-opacity"
@@ -66,6 +68,15 @@ export default function Footer() {
             style={{ fontSize: '14px' }}
           >
             Contact
+          </a>
+          <a
+            href="https://www.linkedin.com/company/aoliaai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body font-normal text-white hover:opacity-60 transition-opacity"
+            style={{ fontSize: '14px' }}
+          >
+            LinkedIn
           </a>
         </nav>
       </div>

@@ -9,6 +9,9 @@
  * - Bottom spacing: handled by TestimonialSection (159px above quote container)
  */
 
+import campusIllustration from '@assets/campus-C31lmIN3.webp';
+import cguLogo from '@assets/cgu-logo-CEyR7QOh.svg';
+
 export default function PilotSection() {
   return (
     <section className="w-full bg-[#F2EDE4]">
@@ -28,18 +31,18 @@ export default function PilotSection() {
               marginTop: '71px',
             }}
           >
-            Piloted with Claremont
+            Piloting with Claremont
             <br />
             Graduate University.
           </h2>
 
-          {/* Campus illustration — 123×87px, margin-top 51px */}
+          {/* CGU illustration — 126×98px, margin-top 51px */}
           <img
-            src="/manus-storage/campus_44b88d1e.svg"
-            alt="Campus building illustration"
+            src={campusIllustration}
+            alt="Claremont Graduate University building illustration"
             style={{
-              width: '123px',
-              height: '87px',
+              width: '126px',
+              height: '98px',
               marginTop: '51px',
               display: 'block',
             }}
@@ -78,7 +81,7 @@ export default function PilotSection() {
 
           {/* CGU logo — 396×32px, 46px below last paragraph, left-aligned with text block */}
           <img
-            src="/manus-storage/CGUlogo_d3dbd232.svg"
+            src={cguLogo}
             alt="Claremont Graduate University"
             style={{
               marginTop: '46px',

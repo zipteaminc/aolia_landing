@@ -9,13 +9,15 @@
  * - Bottom divider: 136px below last paragraph
  */
 
+import rubricsIllustration from '@assets/rubrics-BkBnwuKp.png';
+
 export default function ProblemSection() {
   return (
     <section className="w-full bg-[#F2EDE4]">
       {/* Top divider — 92px below illustration */}
       <div
         style={{
-          marginTop: '92px',
+          marginTop: '90px',
           marginLeft: '68px',
           marginRight: '68px',
           height: '1px',
@@ -51,7 +53,7 @@ export default function ProblemSection() {
 
           {/* Rubrics illustration — 94×80px, margin-top 51px */}
           <img
-            src="/manus-storage/rubrics_cf03f129.svg"
+            src={rubricsIllustration}
             alt="Rubrics grid illustration"
             style={{
               width: '94px',
